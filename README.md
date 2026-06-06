@@ -1,7 +1,5 @@
 # TAV: Text-Assisted Vision Model for Medical Image Segmentation
 
-PyTorch implementation of **Text-Assisted Vision Model for Medical Image Segmentation**.
-
 TAV improves medical image segmentation by using both image features and corresponding medical text annotations. The core components are:
 
 - **Tri-Guided Attention Module (TGAM)**: computes visual-visual, language-language, and language-visual attention.
