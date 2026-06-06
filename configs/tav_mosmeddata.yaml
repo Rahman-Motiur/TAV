@@ -1,0 +1,30 @@
+seed: 42
+run_dir: runs/tav_mosmeddata
+
+data:
+  train_csv: data/mosmeddata_train.csv
+  image_size: [224, 224]
+  in_channels: 1
+  vocab_size: 4096
+  max_text_length: 32
+
+model:
+  image_channels: 1
+  num_classes: 2
+  vocab_size: 4096
+  max_text_length: 32
+  text_dim: 128
+  channels: [32, 64, 128, 256]
+  lambda_visual: 0.6
+  lambda_cross: 0.4
+
+training:
+  epochs: 200
+  batch_size: 8
+  lr: 0.0001
+  weight_decay: 0.0001
+  num_workers: 2
+  dice_weight: 0.6
+  ce_weight: 0.4
+  contrastive_weight: 1.0
+  contrastive_margin: 0.2
