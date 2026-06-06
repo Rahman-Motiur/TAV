@@ -57,17 +57,6 @@ Run:
 python scripts/train_tav.py --config configs/tav_mosmeddata.yaml
 ```
 
-## Paper-to-Code Mapping
-
-| Paper component | Code |
-| --- | --- |
-| Visual encoder stages | `tav/models/vision_encoder.py` |
-| Text encoder and projections | `tav/models/text_encoder.py` |
-| TGAM | `tav/models/tgam.py` |
-| Attention Gate | `tav/models/attention_gate.py` |
-| TAV forward workflow | `tav/models/tav.py` |
-| Contrastive + Dice + CE loss | `tav/training/losses.py` |
-
 ## Datasets
 
 The paper evaluates TAV on MosMedData+ and QaTa-COV19 using paired medical images, segmentation masks, and corresponding text annotations.
