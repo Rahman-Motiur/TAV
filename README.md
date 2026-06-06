@@ -1,4 +1,4 @@
-# TAV PyTorch
+# TAV: Text-Assisted Vision Model for Medical Image Segmentation
 
 PyTorch implementation of **Text-Assisted Vision Model for Medical Image Segmentation**.
 
@@ -15,7 +15,7 @@ This repository includes a compact runnable implementation. It uses a lightweigh
 ## Repository Layout
 
 ```text
-tav-pytorch/
+TAV/
   tav/
     data/              CSV image-mask-text dataset loader
     models/            TAV, TGAM, attention gate, encoders, decoder
@@ -29,7 +29,7 @@ tav-pytorch/
 ## Installation
 
 ```bash
-git clone https://github.com/<your-user>/TAV.git
+git clone https://github.com/Rahman-Motiur/TAV.git
 cd TAV
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
@@ -68,6 +68,21 @@ python scripts/train_tav.py --config configs/tav_mosmeddata.yaml
 | TAV forward workflow | `tav/models/tav.py` |
 | Contrastive + Dice + CE loss | `tav/training/losses.py` |
 
+## Datasets
+
+The paper evaluates TAV on MosMedData+ and QaTa-COV19 using paired medical images, segmentation masks, and corresponding text annotations.
+
 ## Notes
 
 The paper evaluates TAV with pretrained text encoders such as BERT variants. This implementation keeps the interface simple and runnable by default. To reproduce paper-scale results, replace `LightweightTextEncoder` with a pretrained medical text encoder and keep the same TGAM interface.
+
+## Citation
+
+```bibtex
+@article{rahman2026tav,
+  title={Text-Assisted Vision Model for Medical Image Segmentation},
+  author={Rahman, Md Motiur and Rahman, Saeka and Bhatt, Smriti and Faezipour, Miad},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  year={2026}
+}
+```
